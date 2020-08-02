@@ -17,7 +17,6 @@ function regex(input) {
     // 숫자, 영문자 조합으로 6 ~ 12자리
     function password() {
         const regExp = /^[A-Za-z0-9]{6,12}$/;
-
         return regExp.test(input);
     }
 }
