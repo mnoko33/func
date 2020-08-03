@@ -24,5 +24,3 @@ function getAge(birthDate) {
 
     return [manAge, koreanAge];
 }
-
-console.log(getAge('1993-12-27 00:00:00'))
