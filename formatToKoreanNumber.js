@@ -9,33 +9,33 @@
 */
 
 function formatToKoreanNumber(num) {
-    if (!num) return 0;
-    if (num >= 1000000000000) throw "Number can not exceed 1 trillion"
+  if (!num) return 0;
+  if (num >= 1000000000000) throw "Number can not exceed 1 trillion"
 
-    let result = '';
-    num = String(num);
-    const N = num.length;
-    let flag = false;
-    
-    for (let i = 0; i < N; i++) {
-        if (flag === false && num[i] === '0') continue;
-        if (num[i] > 0) flag = true;
-        result += num[i];
+  let result = '';
+  num = String(num);
+  const N = num.length;
+  let flag = false;
+  
+  for (let i = 0; i < N; i++) {
+    if (flag === false && num[i] === '0') continue;
+    if (num[i] > 0) flag = true;
+    result += num[i];
 
-        // 단위 붙이기
-        if (N - i - 1 === 8) {
-            result += '억 ';
-            flag = false;
-        } else if (N - i - 1 === 4) {
-            result += '만 ';
-            flag = false;
-        }
-
-        // 콤마 붙이기
-        if ((N - i) % 4 === 0 && i !== N - 1 && flag === true) {
-            result += ',';
-        }
+    // 단위 붙이기
+    if (N - i - 1 === 8) {
+      result += '억 ';
+      flag = false;
+    } else if (N - i - 1 === 4) {
+      result += '만 ';
+      flag = false;
     }
-    
-    return result;
+
+    // 콤마 붙이기
+    if ((N - i) % 4 === 0 && i !== N - 1 && flag === true) {
+      result += ',';
+    }
+  }
+  
+  return result;
 }

@@ -5,22 +5,22 @@
 */
 
 function getAge(birthDate) {
-    birthDate = new Date(birthDate);
-    nowDate = new Date();
+	birthDate = new Date(birthDate);
+	nowDate = new Date();
 
-    if (birthDate > nowDate) return [0, 0];
+	if (birthDate > nowDate) return [0, 0];
 
-    let manAge, koreanAge;
+	let manAge, koreanAge;
 
-    const [birthYear, birthMonth, birthDay] = [birthDate.getFullYear(), birthDate.getMonth() + 1, birthDate.getDate()];
-    const [nowYear, nowMonth, nowDay] = [nowDate.getFullYear(), nowDate.getMonth() + 1, nowDate.getDate()];
+	const [birthYear, birthMonth, birthDay] = [birthDate.getFullYear(), birthDate.getMonth() + 1, birthDate.getDate()];
+	const [nowYear, nowMonth, nowDay] = [nowDate.getFullYear(), nowDate.getMonth() + 1, nowDate.getDate()];
 
-    manAge = nowYear - birthYear;
-    if (birthMonth > nowMonth || birthMonth === nowMonth && birthDay > nowDay) {
-        manAge -= 1;
-    }
+	manAge = nowYear - birthYear;
+	if (birthMonth > nowMonth || birthMonth === nowMonth && birthDay > nowDay) {
+		manAge -= 1;
+	}
 
-    koreanAge = nowYear - birthYear + 1;
+	koreanAge = nowYear - birthYear + 1;
 
-    return [manAge, koreanAge];
+	return [manAge, koreanAge];
 }
