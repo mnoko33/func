@@ -1,22 +1,48 @@
 # JS Function
 
-* commaizeNumber
+javascript로 만든 함수 모음집
 
-* compareObj
+## lazyload
 
-* darkMode
+이미지 등을 처음부터 모두 로딩하는 것이 아니라 현재 화면 내에서 보여지는 영역에 있는 이미지만 로드하여 성능을 개선하는 방법
 
-* deepcopy
+## darkMode
 
-* formatToKoreanNumber
+다크모드를 지원하는 toggle 버튼을 반환하는 함수
 
-* getAge
+## InfiniteScroll
 
-* infiniteScroll
+현재 스크롤보다 스크롤을 내릴 때마다 파라미터로 넘긴 콜백함수를 실행하는 함수
 
-* lazyload
+## scrollToTop
 
-* [regex]: https://github.com/mnoko33/func/blob/master/regex.js
+스크롤이 내려져있을 때 최상단으로 부드럽게 올라가도록 스크롤을 세팅하는 함수
 
-* scrollToTop
+## commaizeNumber
+
+파라미터로 화폐숫자가 들어왔을 때 회계형식으로 세자리마다 ,를 찍은 문자열로 반환하는 함수
+
+## compareObj
+
+파라미터로 받아온 두 개의 obj의 값이 서로 같은지 비교하는 함수
+
+## deepcopy
+
+파라미터로 받아온 객체를 재귀적으로 deepcopy하는 함수
+
+## formatToKoreanNumber
+
+파라미터로 1조 미만의 숫자가 들어왔을 때 억, 만 단위마다 해당 한글을 붙여서 문자열로 반환하는 함수
+
+## getAge
+
+파라미터로 생일을 받아오면 만나이와 한국식 나이를 배열에 담아 반환하는 함수
+
+## regex
+
+정규표현식
+
+* 이메일
+* 핸드폰 번호
+* 비밀번호
 
